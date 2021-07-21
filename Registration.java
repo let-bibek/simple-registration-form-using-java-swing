@@ -1,4 +1,6 @@
-// Java program to implement
+// Bibek Shrestha
+
+//==================================//
 // a Simple Registration Form
 // using Java Swing
 
@@ -53,14 +55,14 @@ class MyFrame
 			"2007", "2008", "2009", "2010",
 			"2011", "2012", "2013", "2014",
 			"2015", "2016", "2017", "2018",
-			"2019" };
+			"2019","2020","2021" };
 
 	// constructor, to initialize the components
 	// with default values.
 	public MyFrame()
 	{
 		setTitle("Registration Form");
-		setBounds(300, 90, 900, 600);
+		setBounds(700, 90, 900, 600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 
