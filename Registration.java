@@ -35,6 +35,7 @@ class MyFrame
 	private JTextArea tout;
 	private JLabel res;
 	private JTextArea resadd;
+	
 
 	private String dates[]
 		= { "1", "2", "3", "4", "5",
@@ -62,58 +63,58 @@ class MyFrame
 	public MyFrame()
 	{
 		setTitle("Registration Form");
-		setBounds(700, 90, 900, 600);
+		setBounds(270, 90, 900, 600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setResizable(false);
-
+		
 		c = getContentPane();
 		c.setLayout(null);
 
-		title = new JLabel("Registration Form");
-		title.setFont(new Font("Arial", Font.PLAIN, 30));
-		title.setSize(300, 30);
+		title = new JLabel("Registration Form",JLabel.CENTER);
+		title.setFont(new Font("TimesRoman", Font.PLAIN, 30));
+		title.setSize(300, 40);
 		title.setLocation(300, 30);
+		title.setForeground(Color.BLUE);
 		c.add(title);
 
 		name = new JLabel("Name");
-		name.setFont(new Font("Arial", Font.PLAIN, 20));
+		name.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		name.setSize(100, 20);
 		name.setLocation(100, 100);
 		c.add(name);
 
 		tname = new JTextField();
-		tname.setFont(new Font("Arial", Font.PLAIN, 15));
+		tname.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		tname.setSize(190, 20);
 		tname.setLocation(200, 100);
 		c.add(tname);
 
-		mno = new JLabel("Mobile");
-		mno.setFont(new Font("Arial", Font.PLAIN, 20));
+		mno = new JLabel("Phone");
+		mno.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		mno.setSize(100, 20);
 		mno.setLocation(100, 150);
 		c.add(mno);
 
 		tmno = new JTextField();
-		tmno.setFont(new Font("Arial", Font.PLAIN, 15));
+		tmno.setFont(new Font("Arial", Font.PLAIN, 16));
 		tmno.setSize(150, 20);
 		tmno.setLocation(200, 150);
 		c.add(tmno);
 
 		gender = new JLabel("Gender");
-		gender.setFont(new Font("Arial", Font.PLAIN, 20));
+		gender.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		gender.setSize(100, 20);
 		gender.setLocation(100, 200);
 		c.add(gender);
 
 		male = new JRadioButton("Male");
-		male.setFont(new Font("Arial", Font.PLAIN, 15));
+		male.setFont(new Font("TimesRoman", Font.BOLD, 15));
 		male.setSelected(true);
 		male.setSize(75, 20);
 		male.setLocation(200, 200);
 		c.add(male);
 
 		female = new JRadioButton("Female");
-		female.setFont(new Font("Arial", Font.PLAIN, 15));
+		female.setFont(new Font("TimesRoman", Font.BOLD, 15));
 		female.setSelected(false);
 		female.setSize(80, 20);
 		female.setLocation(275, 200);
@@ -124,7 +125,7 @@ class MyFrame
 		gengp.add(female);
 
 		dob = new JLabel("DOB");
-		dob.setFont(new Font("Arial", Font.PLAIN, 20));
+		dob.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		dob.setSize(100, 20);
 		dob.setLocation(100, 250);
 		c.add(dob);
@@ -148,14 +149,16 @@ class MyFrame
 		c.add(year);
 
 		add = new JLabel("Address");
-		add.setFont(new Font("Arial", Font.PLAIN, 20));
+		add.setFont(new Font("TimesRoman", Font.PLAIN, 16));
 		add.setSize(100, 20);
 		add.setLocation(100, 300);
 		c.add(add);
 
 		tadd = new JTextArea();
 		tadd.setFont(new Font("Arial", Font.PLAIN, 15));
-		tadd.setSize(200, 75);
+		tadd.setSize(200, 35);
+		//  create a line border with the specified color and width
+		tadd.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
 		tadd.setLocation(200, 300);
 		tadd.setLineWrap(true);
 		c.add(tadd);
@@ -197,6 +200,7 @@ class MyFrame
 		resadd = new JTextArea();
 		resadd.setFont(new Font("Arial", Font.PLAIN, 15));
 		resadd.setSize(200, 75);
+		resadd.setBackground(new Color(70,80,70));
 		resadd.setLocation(580, 175);
 		resadd.setLineWrap(true);
 		c.add(resadd);
